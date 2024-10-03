@@ -41,7 +41,7 @@ const Orders = () => {
             ]}
           >
             <View style={styles.cardHeader}>
-              <Text style={styles.orderNumber}>Order No: {card.orderNumber}</Text>
+              <Text style={styles.orderNumber}>Order Nos: {card.orderNumber}</Text>
               <Text style={styles.status}>{card.status}</Text>
             </View>
             <Text style={styles.cardName}>{card.name}</Text>
