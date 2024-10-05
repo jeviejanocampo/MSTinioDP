@@ -11,7 +11,7 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
   const [showDashboard, setShowDashboard] = useState(false); 
   const [showOrders, setShowOrders] = useState(false); 
   const [showProfile, setShowProfile] = useState(false); 
-  const [selectedItem, setSelectedItem] = useState(null); 
+  const [selectedItem, setSelectedItem] = useState<string | null>(null); 
 
   const {
     slideAnim,
@@ -50,27 +50,34 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
       </TouchableOpacity>
 
       <View style={styles.headerc}>
-        <Text style={styles.headerText}>Portal</Text>
+        {/* <Text style={styles.headerText}>Portal</Text> */}
         <View style={styles.textRow}>
-          <TouchableOpacity onPress={handleDashboardClick} style={styles.textContainer}>
+          <TouchableOpacity 
+            onPress={handleDashboardClick} 
+            style={[styles.textContainer, selectedItem === 'dashboard' && { backgroundColor: 'green' }]} // Change background color when selected
+          >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleDashboard }] }]}
             >
               Dashboard
             </Animated.Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={handleOrdersClick} style={styles.textContainer}>
+          <TouchableOpacity 
+            onPress={handleOrdersClick} 
+            style={[styles.textContainer, selectedItem === 'orders' && { backgroundColor: 'green' }]} // Change background color when selected
+          >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleOrders }] }]}
             >
               Orders
             </Animated.Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {
+          <TouchableOpacity 
+            onPress={() => {
               setSelectedItem('inventory');
               animateText('inventory');
             }} 
-            style={styles.textContainer}
+            style={[styles.textContainer, selectedItem === 'inventory' && { backgroundColor: 'green' }]} // Change background color when selected
           >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleInventory }] }]}

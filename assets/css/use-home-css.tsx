@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   headerc: {
-    marginTop: 20,
+    marginTop: 80,
   },
 
 profileContainer: {
@@ -48,7 +48,7 @@ profileContainer: {
     right: 6,
   },
   textContainer: {
-    backgroundColor: '#213A57',
+    backgroundColor: '#03C85E99',
     padding: 12,
     borderRadius: 30,
   },
