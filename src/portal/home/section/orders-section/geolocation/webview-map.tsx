@@ -109,7 +109,7 @@ const GeolocationWebView = forwardRef((props: GeolocationWebViewProps, ref) => {
 
       <TouchableOpacity style={styles.mapButton} onPress={openGoogleMaps}>
         <Image source={MapIcon} style={styles.mapIcon} />
-        <Text style={styles.mapButtonText}>View My Map</Text>
+        <Text style={styles.mapButtonText}>Track Order</Text>
       </TouchableOpacity>
     </View>
   );
@@ -145,8 +145,8 @@ const styles = StyleSheet.create({
   },
   mapButtonText: {
     fontSize: 16,
-    color: '#007BFF',
-    fontFamily: 'Poppins-SemiBold',
+    color: 'black',
+    fontFamily: 'Roboto-Bold',
   },
 });
 

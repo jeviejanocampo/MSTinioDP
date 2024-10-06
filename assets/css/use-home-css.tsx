@@ -3,9 +3,19 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   headerc: {
     marginTop: 80,
+    left: 4,
   },
-
-profileContainer: {
+  rightImageContainer: {
+    position: 'absolute',
+    right: 26, 
+    top: 24, 
+  },
+  rightImage: {
+    width: 30, // Adjust the width of the image
+    height: 30, // Adjust the height of the image
+    resizeMode: 'contain', // Ensure the image scales correctly
+  },
+   profileContainer: {
     position: 'absolute',
     top: 0,
     left: 1,

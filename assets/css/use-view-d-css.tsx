@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
+    textAlign: 'center',
+    marginBottom: 12,
     fontSize: 24,
     fontWeight: 'bold',
     color: 'black', 
@@ -16,6 +18,10 @@ const styles = StyleSheet.create({
     marginBottom: 20, 
   },
   detailText: {
+    color: 'black', 
+    fontSize: 16,
+  },
+  detailTexts: {
     color: 'black', 
     fontSize: 16,
   },

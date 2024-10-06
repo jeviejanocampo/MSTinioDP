@@ -48,7 +48,7 @@ const Orders = () => {
   return (
     <ScrollView contentContainerStyle={styles.bodyContainer}>
       <View style={styles.dateFilterContainer}>
-        <Text style={styles.todayText}>Orders Today</Text>
+        {/* <Text style={styles.todayText}>Orders Today</Text> */}
         
         <TouchableOpacity onPress={showPicker}>
           <Text style={styles.datePickerButton}>Pick a date</Text>

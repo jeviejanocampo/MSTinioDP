@@ -1,18 +1,22 @@
-// use-dashboard.tsx
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import AcceptOrders from './new-orders/use-accept-orders';
 
 const Dashboard = () => {
   return (
-    <View style={styles.bodyContainer}>
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>Card 1</Text>
-        <Text style={styles.cardContent}>Content for Card 1</Text>
+    <View style={{ flex: 1, padding: 20 }}> 
+      <View style={styles.bodyContainer}>
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>Card 1</Text>
+          <Text style={styles.cardContent}>Content for Card 1</Text>
+        </View>
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>Card 2</Text>
+          <Text style={styles.cardContent}>Content for Card 2</Text>
+        </View>
       </View>
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>Card 2</Text>
-        <Text style={styles.cardContent}>Content for Card 2</Text>
-      </View>
+      
+      <AcceptOrders />
     </View>
   );
 };
@@ -22,8 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', // Arrange cards in a row
     justifyContent: 'space-between', // Space cards evenly
     width: '100%', // Full width for container
-    paddingHorizontal: 20, // Horizontal padding
-    marginTop: 40, // Space between header and body
+    marginTop: 10, // Space between header and body
   },
   card: {
     backgroundColor: '#fff', // White background for the card

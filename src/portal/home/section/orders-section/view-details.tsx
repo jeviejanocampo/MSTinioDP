@@ -34,9 +34,15 @@ const ViewDetails: React.FC<{ route: RouteProp<RootStackParamList, 'ViewDetails'
 
         <Text style={styles.title}>Order Details</Text>
         <Text style={styles.detailText}>Order Number: {orderDetails.orderNumber}</Text>
-        <Text style={styles.detailText}>Status: {orderDetails.status}</Text>
-        <Text style={styles.detailText}>Name: {orderDetails.name}</Text>
         <Text style={styles.detailText}>Address: {"Address Here"}</Text>
+        <Text style={styles.detailText}>
+        Payment Method: {"COD"}{" "}
+        <Text style={{ color: 'white',fontWeight: 'bold', backgroundColor: 'red',  borderRadius: 5 }}>
+          Pending
+        </Text>
+      </Text>
+
+        <Text style={styles.detailText}>Name: {orderDetails.name}</Text>
 
         <View style={localStyles.detailsRow}>
           <Text style={[styles.detailText, { flex: 1, fontWeight: 500}]}>Order Status--------------------------------</Text>

@@ -49,12 +49,19 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
         />
       </TouchableOpacity>
 
+      <View style={styles.rightImageContainer}>
+        <Image
+          source={require('../../../assets/png/notification-nav.png')} 
+          style={styles.rightImage}
+          resizeMode="contain"
+        />
+      </View>
+
       <View style={styles.headerc}>
-        {/* <Text style={styles.headerText}>Portal</Text> */}
         <View style={styles.textRow}>
           <TouchableOpacity 
             onPress={handleDashboardClick} 
-            style={[styles.textContainer, selectedItem === 'dashboard' && { backgroundColor: 'green' }]} // Change background color when selected
+            style={[styles.textContainer, selectedItem === 'dashboard' && { backgroundColor: 'green' }]} 
           >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleDashboard }] }]}
@@ -64,12 +71,12 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity 
             onPress={handleOrdersClick} 
-            style={[styles.textContainer, selectedItem === 'orders' && { backgroundColor: 'green' }]} // Change background color when selected
+            style={[styles.textContainer, selectedItem === 'orders' && { backgroundColor: 'green' }]} 
           >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleOrders }] }]}
             >
-              Orders
+              Active Orders
             </Animated.Text>
           </TouchableOpacity>
           <TouchableOpacity 
@@ -77,7 +84,7 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
               setSelectedItem('inventory');
               animateText('inventory');
             }} 
-            style={[styles.textContainer, selectedItem === 'inventory' && { backgroundColor: 'green' }]} // Change background color when selected
+            style={[styles.textContainer, selectedItem === 'inventory' && { backgroundColor: 'green' }]} 
           >
             <Animated.Text 
               style={[styles.textItem, { transform: [{ scale: scaleInventory }] }]}
@@ -89,7 +96,7 @@ const Home: React.FC<{ navigation: NavigationProps }> = ({ navigation }) => {
       </View>
 
       {showDashboard && <Dashboard />}
-      {showOrders && <Orders />}
+      {showOrders && <Orders />}  
 
       {showProfile && (
         <Animated.View 

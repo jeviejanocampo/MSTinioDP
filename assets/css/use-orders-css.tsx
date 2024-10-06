@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   },
   viewDetailsText: {
     color: 'white',
+    fontFamily: 'Roboto-Bold',
     fontSize: 16,
   },
   dateText: {
