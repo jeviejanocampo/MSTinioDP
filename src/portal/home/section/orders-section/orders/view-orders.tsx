@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 20,
     alignItems: 'center',
+    elevation: 2,
   },
   productImage: {
     width: 60,
@@ -133,6 +134,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f2f2',
     borderRadius: 8,
     paddingBottom: 70,
+    elevation: 2,
   },
   summaryText: {
     fontSize: 16,
